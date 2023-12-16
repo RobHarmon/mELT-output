@@ -9,7 +9,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_humanresources_department
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_humanresources_department
 				), '1980-01-01')
@@ -32,7 +32,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_humanresources_employee
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_humanresources_employee
 				), '1980-01-01')
@@ -55,7 +55,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_humanresources_employeedepartmenthistory
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_humanresources_employeedepartmenthistory
 				), '1980-01-01')
@@ -78,7 +78,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_humanresources_employeepayhistory
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_humanresources_employeepayhistory
 				), '1980-01-01')
@@ -101,7 +101,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_humanresources_jobcandidate
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_humanresources_jobcandidate
 				), '1980-01-01')
@@ -124,7 +124,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_humanresources_shift
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_humanresources_shift
 				), '1980-01-01')
@@ -147,7 +147,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_person_address
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_person_address
 				), '1980-01-01')
@@ -170,7 +170,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_person_addresstype
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_person_addresstype
 				), '1980-01-01')
@@ -193,7 +193,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_person_businessentity
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_person_businessentity
 				), '1980-01-01')
@@ -216,7 +216,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_person_businessentityaddress
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_person_businessentityaddress
 				), '1980-01-01')
@@ -239,7 +239,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_person_businessentitycontact
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_person_businessentitycontact
 				), '1980-01-01')
@@ -262,7 +262,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_person_contacttype
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_person_contacttype
 				), '1980-01-01')
@@ -285,7 +285,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_person_countryregion
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_person_countryregion
 				), '1980-01-01')
@@ -308,7 +308,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_person_emailaddress
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_person_emailaddress
 				), '1980-01-01')
@@ -331,7 +331,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_person_password
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_person_password
 				), '1980-01-01')
@@ -354,7 +354,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_person_person
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_person_person
 				), '1980-01-01')
@@ -377,7 +377,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_person_personphone
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_person_personphone
 				), '1980-01-01')
@@ -400,7 +400,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_person_phonenumbertype
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_person_phonenumbertype
 				), '1980-01-01')
@@ -423,7 +423,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_person_stateprovince
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_person_stateprovince
 				), '1980-01-01')
@@ -446,7 +446,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_billofmaterials
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_billofmaterials
 				), '1980-01-01')
@@ -469,7 +469,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_culture
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_culture
 				), '1980-01-01')
@@ -492,7 +492,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_document
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_document
 				), '1980-01-01')
@@ -515,7 +515,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_illustration
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_illustration
 				), '1980-01-01')
@@ -538,7 +538,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_location
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_location
 				), '1980-01-01')
@@ -561,7 +561,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_product
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_product
 				), '1980-01-01')
@@ -584,7 +584,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_productcategory
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_productcategory
 				), '1980-01-01')
@@ -607,7 +607,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_productcosthistory
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_productcosthistory
 				), '1980-01-01')
@@ -630,7 +630,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_productdescription
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_productdescription
 				), '1980-01-01')
@@ -653,7 +653,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_productdocument
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_productdocument
 				), '1980-01-01')
@@ -676,7 +676,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_productinventory
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_productinventory
 				), '1980-01-01')
@@ -699,7 +699,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_productlistpricehistory
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_productlistpricehistory
 				), '1980-01-01')
@@ -722,7 +722,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_productmodel
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_productmodel
 				), '1980-01-01')
@@ -745,7 +745,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_productmodelillustration
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_productmodelillustration
 				), '1980-01-01')
@@ -768,7 +768,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_productmodelproductdescriptionculture
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_productmodelproductdescriptionculture
 				), '1980-01-01')
@@ -791,7 +791,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_productphoto
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_productphoto
 				), '1980-01-01')
@@ -814,7 +814,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_productproductphoto
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_productproductphoto
 				), '1980-01-01')
@@ -837,7 +837,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_productreview
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_productreview
 				), '1980-01-01')
@@ -860,7 +860,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_productsubcategory
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_productsubcategory
 				), '1980-01-01')
@@ -883,7 +883,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_scrapreason
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_scrapreason
 				), '1980-01-01')
@@ -906,7 +906,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_transactionhistory
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_transactionhistory
 				), '1980-01-01')
@@ -929,7 +929,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_transactionhistoryarchive
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_transactionhistoryarchive
 				), '1980-01-01')
@@ -952,7 +952,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_unitmeasure
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_unitmeasure
 				), '1980-01-01')
@@ -975,7 +975,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_workorder
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_workorder
 				), '1980-01-01')
@@ -998,7 +998,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_production_workorderrouting
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_production_workorderrouting
 				), '1980-01-01')
@@ -1021,7 +1021,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_purchasing_productvendor
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_purchasing_productvendor
 				), '1980-01-01')
@@ -1044,7 +1044,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_purchasing_purchaseorderdetail
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_purchasing_purchaseorderdetail
 				), '1980-01-01')
@@ -1067,7 +1067,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_purchasing_purchaseorderheader
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_purchasing_purchaseorderheader
 				), '1980-01-01')
@@ -1090,7 +1090,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_purchasing_shipmethod
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_purchasing_shipmethod
 				), '1980-01-01')
@@ -1113,7 +1113,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_purchasing_vendor
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_purchasing_vendor
 				), '1980-01-01')
@@ -1136,7 +1136,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_sales_countryregioncurrency
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_sales_countryregioncurrency
 				), '1980-01-01')
@@ -1159,7 +1159,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_sales_creditcard
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_sales_creditcard
 				), '1980-01-01')
@@ -1182,7 +1182,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_sales_currency
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_sales_currency
 				), '1980-01-01')
@@ -1205,7 +1205,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_sales_currencyrate
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_sales_currencyrate
 				), '1980-01-01')
@@ -1228,7 +1228,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_sales_customer
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_sales_customer
 				), '1980-01-01')
@@ -1251,7 +1251,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_sales_personcreditcard
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_sales_personcreditcard
 				), '1980-01-01')
@@ -1274,7 +1274,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_sales_salesorderdetail
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_sales_salesorderdetail
 				), '1980-01-01')
@@ -1297,7 +1297,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_sales_salesorderheader
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_sales_salesorderheader
 				), '1980-01-01')
@@ -1320,7 +1320,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_sales_salesorderheadersalesreason
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_sales_salesorderheadersalesreason
 				), '1980-01-01')
@@ -1343,7 +1343,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_sales_salesperson
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_sales_salesperson
 				), '1980-01-01')
@@ -1366,7 +1366,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_sales_salespersonquotahistory
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_sales_salespersonquotahistory
 				), '1980-01-01')
@@ -1389,7 +1389,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_sales_salesreason
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_sales_salesreason
 				), '1980-01-01')
@@ -1412,7 +1412,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_sales_salestaxrate
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_sales_salestaxrate
 				), '1980-01-01')
@@ -1435,7 +1435,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_sales_salesterritory
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_sales_salesterritory
 				), '1980-01-01')
@@ -1458,7 +1458,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_sales_salesterritoryhistory
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_sales_salesterritoryhistory
 				), '1980-01-01')
@@ -1481,7 +1481,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_sales_shoppingcartitem
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_sales_shoppingcartitem
 				), '1980-01-01')
@@ -1504,7 +1504,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_sales_specialoffer
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_sales_specialoffer
 				), '1980-01-01')
@@ -1527,7 +1527,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_sales_specialofferproduct
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_sales_specialofferproduct
 				), '1980-01-01')
@@ -1550,7 +1550,7 @@ AS materialized (
 		,source_file_timestamp
 		,source_file_name
 	FROM ex_Adventureworks_sales_store
-	WHERE source_file_timestamp > coalesce((
+	WHERE source_file_timestamp >= coalesce((
 				SELECT MAX(source_file_timestamp)
 				FROM Adventureworks_sales_store
 				), '1980-01-01')
